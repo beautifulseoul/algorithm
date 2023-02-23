@@ -1,24 +1,14 @@
 class Solution {
     public int solution(int balls, int share) {
-                
-        int limitNum = (balls - share > share)? balls - share : share;
         
-        long denom = 1;
-        for(int i = balls - limitNum; i >= 1 ; i--) {
-            denom *= i;
-        } 
+        int num = Math.min(balls - share, share);
+        long result = 1;
         
-        long numer = 1;
-        for(int i = balls; i > limitNum; i--) {
-            numer *= i;
-            if((numer % 2 == 0) && (denom % 2 == 0)) {
-                denom = denom / 2;
-                numer = numer / 2;
-            }
-        } 
+        for(int i = 0; i < num; i++) {
+            result = result * (balls - i);
+            result = result / (i + 1);
+        }
         
-
-                
-        return (int)(numer / denom);
+        return (int) result;
     }
 }
