@@ -1,9 +1,6 @@
 class Solution {
     public int solution(int balls, int share) {
-        
-//         balls = 30;
-//         share = 15;
-        
+                
         int limitNum = (balls - share > share)? balls - share : share;
         
         long denom = 1;
