@@ -6,14 +6,14 @@ class Solution {
         Arrays.sort(array);
         
         int min = array[0] - n;
-        int answer = 0;
+        int answer = array[0];
     
        
         for(int i = 0; i < array.length; i++) {
-            if(Math.abs(array[i] - n) <= Math.abs(min)) {
-                if((Math.abs(array[i] - n) == Math.abs(min)) && ((array[i] - n) > min)) {
-                     continue;
-                }
+            if(Math.abs(array[i] - n) < Math.abs(min)) {
+                // if((Math.abs(array[i] - n) == Math.abs(min)) && ((array[i] - n) > min)) {
+                //      continue;
+                // }
                 min = array[i] - n;
                 answer = array[i];
             }
