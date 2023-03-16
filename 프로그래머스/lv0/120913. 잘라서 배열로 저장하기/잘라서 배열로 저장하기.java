@@ -4,12 +4,7 @@ class Solution {
         String[] answer = new String[length];
 
         for(int i = 0; i < length; i++) {
-            if(i == length - 1) {
-                answer[i] = my_str.substring(i * n);
-            } else {
-               answer[i] = my_str.substring(i * n, n * (i + 1) ); 
-            }
-            
+            answer[i] = (i == length - 1)? my_str.substring(i * n) : my_str.substring(i * n, n * (i + 1) ); 
         }
         return answer;
     }
