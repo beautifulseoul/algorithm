@@ -1,17 +1,15 @@
 class Solution {
     public String[] solution(String my_str, int n) {
         int length = (int)Math.ceil((double)my_str.length()/n);
-        
         String[] answer = new String[length];
-        
-        int num = 0;
-        for(int i = 0; i < my_str.length(); i+=n) {
-            if(num == length - 1) {
-                answer[num] = my_str.substring(i);
+
+        for(int i = 0; i < length; i++) {
+            if(i == length - 1) {
+                answer[i] = my_str.substring(i * n);
             } else {
-               answer[num] = my_str.substring(i, i + n); 
+               answer[i] = my_str.substring(i * n, n * (i + 1) ); 
             }
-            num++;
+            
         }
         return answer;
     }
