@@ -6,7 +6,7 @@ class Solution {
         int yMax = dots[0][1];
         int yMin = dots[0][1];
         
-        for(int i = 0; i < 4; i++) {
+        for(int i = 1; i < 4; i++) {
             xMax = Math.max(dots[i][0], xMax);
             xMin = Math.min(dots[i][0], xMin);
             yMax = Math.max(dots[i][1], yMax);
