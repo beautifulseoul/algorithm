@@ -8,24 +8,14 @@ class Solution {
         
         for(int i = 0; i < strArr.length ; i+=2) {
             switch(strArr[i].indexOf("x")) {
-                case -1 : 
-                    constant +=Integer.valueOf(strArr[i]);
+                case -1 : constant +=Integer.valueOf(strArr[i]);
                     break;
-                case 0 :
-                    coefficient +=1;
+                case 0 : coefficient +=1;
                     break;
-                default:
-                    coefficient +=Integer.valueOf(strArr[i].replace("x", ""));
+                default : coefficient +=Integer.valueOf(strArr[i].replace("x", ""));
             }
         }
-      
-        
-        
-        
-         System.out.println(constant);
-        System.out.println(coefficient);
-        String zzz = "x";
-         // System.out.println(zzz.replace("x", ""));    
+       
         String answer = "";
         if(constant == 0) {
             answer = (coefficient == 1)? "x" : coefficient + "x";
@@ -34,7 +24,6 @@ class Solution {
         } else {
             answer = (coefficient == 1)? "x" + " + " + constant : coefficient + "x" + " + " + constant;
         }
-            // (? coefficient + "x" : coefficient + "x" + " + " + constant;
         return answer;
     }
 }
