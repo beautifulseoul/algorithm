@@ -1,6 +1,6 @@
 import java.util.Arrays;
- import java.util.Set;
- import java.util.HashSet;
+import java.util.Set;
+import java.util.HashSet;
 
 class Solution {
     public int solution(int[] sides) {
@@ -27,7 +27,6 @@ class Solution {
             set.add(i);
         }
         
-        int answer = 0;
         return set.size();
     }
 }
