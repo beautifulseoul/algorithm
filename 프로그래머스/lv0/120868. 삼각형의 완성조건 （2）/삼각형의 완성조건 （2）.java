@@ -8,17 +8,10 @@ class Solution {
         Arrays.sort(sides);
         Set set = new HashSet();
         
-        // 가장 짧은 변
-        for(int i = 1 ; i <= sides[0]; i++) {
+        // 가장 긴 변이 아닌 경우
+        for(int i = 1 ; i <= sides[1]; i++) {
             if(i > sides[1] - sides[0]) {
             set.add(i);
-            }
-        }
-        
-        // 중간길이 변        
-        for(int i = sides[0]; i <= sides[1]; i++) {
-            if(i > sides[1] - sides[0]) {
-                set.add(i);
             }
         }
         
