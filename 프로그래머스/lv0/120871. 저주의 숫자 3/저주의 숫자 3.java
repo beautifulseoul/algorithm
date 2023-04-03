@@ -4,7 +4,7 @@ class Solution {
         int count = 0;
         int answer = 0;
         
-            for(int i = 1; count != n; i++) {
+            for(int i = 1; count < n; i++) {
                 if((i % 3 !=0) && !(String.valueOf(i).contains("3"))) {
                     count++;
                     answer = i;
