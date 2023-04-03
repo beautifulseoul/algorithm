@@ -10,8 +10,7 @@ class Solution {
         
         for(int i = 0; i < lines.length; i++) {
             for(int j = lines[i][0]; j < lines[i][1]; j++) {
-                if(map.get(j) == null) { map.put(j, 1); }
-                else { map.put(j, map.get(j) + 1); }
+                map.put(j, map.getOrDefault(j, 0) + 1);
             }
         }
 
