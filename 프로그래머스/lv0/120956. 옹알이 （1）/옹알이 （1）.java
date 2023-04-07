@@ -10,7 +10,6 @@ class Solution {
                     babbling[i] = babbling[i].replaceFirst(wordArr[j], " ");
                 }
             }
-            System.out.println(babbling[i]);
             if(babbling[i].replaceAll(" ", "").equals("")) count++;
         }
         return count;
