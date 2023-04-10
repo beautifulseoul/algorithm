@@ -9,10 +9,8 @@ class Solution {
         Arrays.sort(beforeArr);
         Arrays.sort(afterArr);
         
-        for(int i =0; i < beforeArr.length; i++) {
-            if(beforeArr[i] != afterArr[i]) return 0;
-        }
+        int answer = (new String(beforeArr).equals(new String(afterArr)))? 1 : 0;
 
-        return 1;
+        return answer;
     }
 }
