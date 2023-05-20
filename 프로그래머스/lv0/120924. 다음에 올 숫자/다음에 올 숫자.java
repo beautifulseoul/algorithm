@@ -7,11 +7,7 @@ class Solution {
         } else {
             // 등비수열 (공비 : common ratio)
             int commonRatio = common[1] / common[0];
-            int answer = common[0];
-            for(int i = 0; i < common.length; i++) {
-                answer *= commonRatio;
-            }
-            return answer;
+            return common[common.length - 1] * commonRatio;
         }
     }
 }
