@@ -1,0 +1,4 @@
+SELECT COUNT(*)
+FROM user_info
+WHERE SUBSTR(joined, 1,4) = '2021'
+AND age BETWEEN 20 AND 29
