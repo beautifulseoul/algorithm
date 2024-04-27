@@ -6,11 +6,11 @@ public class Solution {
         String str = sc.next();
         int n = sc.nextInt();
         
-        String result = "";
+        StringBuilder sb = new StringBuilder();
         for(int i = 0; i < n; i++){
-            result += str;
+            sb.append(str);
         }
         
-        System.out.println(result);
+        System.out.println(sb);
     }
 }
